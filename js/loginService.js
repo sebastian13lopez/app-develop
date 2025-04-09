@@ -4,6 +4,7 @@ document.getElementById('loginForm').addEventListener('submit',function(e){
     const password = document.getElementById('password').value;
     let mensaje = '';
     let tipoAlerta = '';
+
     if(email === '' || password === ''){
         mensaje = 'Por favor completa todos los campos'
         tipoAlerta='warning'
@@ -16,9 +17,11 @@ document.getElementById('loginForm').addEventListener('submit',function(e){
 
     else{
         mensaje = 'Correo o contraseña incorrectos.'     
-        tipoAlerta='danger' 
-    }
-    let alerta = `<div class="alert alert-${tipoAlerta} alert-dismissible fade show" role="alert">
+        tipoAlerta='danger'  
+        }
+
+    let alerta = 
+    `<div class="alert alert-${tipoAlerta} alert-dismissible fade show" role="alert">
     ${mensaje}  
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>`
